@@ -1,35 +1,85 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Container, Nav, Navbar } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { useState } from "react";
+import {
+  AiOutlineHome,
+  AiOutlineFundProjectionScreen,
+  AiOutlineUser,
+} from "react-icons/ai";
+import { CgFileDocument } from "react-icons/cg";
+import { GrProjects } from "react-icons/gr";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [expanded, setExpended] = useState(false);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="">
+        <Navbar expanded={expanded} fixed="top" expand="md" className="sticky">
+          <Container>
+            {/* TODO: add brand here */}
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              onClick={() => {
+                setExpended(expanded ? false : "expanded");
+              }}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </Navbar.Toggle>
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="ms-auto" defaultActiveKey="#home">
+                <Nav.Item>
+                  <Nav.Link href="#home" onClick={() => setExpended(false)}>
+                    <AiOutlineHome style={{ marginBottom: "5px" }} /> Home
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link href="#about" onClick={() => setExpended(false)}>
+                    <AiOutlineUser style={{ marginBottom: "5px" }} /> About
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link
+                    href="#experience"
+                    onClick={() => setExpended(false)}
+                  >
+                    <AiOutlineFundProjectionScreen
+                      style={{ marginBottom: "5px" }}
+                    />{" "}
+                    Experience
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link href="#projects" onClick={() => setExpended(false)}>
+                    <GrProjects size={15} style={{ marginBottom: "5px" }} />{" "}
+                    Projects
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link href="#contact" onClick={() => setExpended(false)}>
+                    <CgFileDocument style={{ marginBottom: "5px" }} /> Contact
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link href="#hire-me" onClick={() => setExpended(false)}>
+                    <CgFileDocument style={{ marginBottom: "5px" }} /> Hire Me
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
