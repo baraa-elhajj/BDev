@@ -9,6 +9,7 @@ import {
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 import { GrProjects } from "react-icons/gr";
+import { FaBars } from "react-icons/fa";
 
 function App() {
   const [expanded, setExpended] = useState(false);
@@ -20,14 +21,13 @@ function App() {
           <Container>
             {/* TODO: add brand here */}
             <Navbar.Toggle
+              style={{ borderColor: "transparent" }}
               aria-controls="responsive-navbar-nav"
               onClick={() => {
                 setExpended(expanded ? false : "expanded");
               }}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <FaBars size={27} />
             </Navbar.Toggle>
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="ms-auto" defaultActiveKey="#home">
