@@ -140,7 +140,10 @@ export default function Navbar() {
                   <span>Resume</span>
                   <ExternalLink className="h-4 w-4" />
                 </a>
-                <button className="px-3 py-2.5 text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md transition-colors">
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-3 py-2.5 text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md transition-colors"
+                >
                   <a href="#hire-me">Hire Me</a>
                 </button>
               </div>
