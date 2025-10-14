@@ -54,42 +54,48 @@ export default function Navbar() {
           : "dark:bg-gray-900/80 backdrop-blur-md"
       } border-b border-gray-200 dark:border-gray-800`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 max-w-7xl">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="flex h-14 sm:h-16 lg:h-20 items-center justify-between">
           {}
           <div className="flex items-center">
             <a href="#home" className="flex items-center space-x-2 group">
-              <img className="size-20" src="src\assets\images\logo.png"></img>
+              <img
+                className="size-15 sm:size-20 ml-2"
+                src="src\assets\images\logo.png"
+              ></img>
             </a>
           </div>
 
           {}
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
-            {navLinks.map((link) => (
+          <div className="flex items-center space-x-6">
+            <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.text}
+                  href={link.href}
+                  className="text-sm lg:text-base font-medium text-[#36353d] dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors relative group"
+                >
+                  {link.text}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#36353d] dark:bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
+            </nav>
+
+            {}
+            <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
               <a
                 href="/documents/BaraaElHajj-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-medium text-[#36353d] dark:text-white/80 border border-[#36353d] dark:border-gray-700 rounded-md hover:bg-[#36353d]/5 dark:hover:bg-gray-800 transition-colors duration-300"
               >
-                {link.text}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#36353d] dark:bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
+                <span>Resume</span>
+                <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
               </a>
-            ))}
-          </nav>
-
-          {}
-          <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
-            <a
-              href="#"
-              className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-medium text-[#36353d] dark:text-white/80 border border-[#36353d] dark:border-gray-700 rounded-md hover:bg-[#36353d]/5 dark:hover:bg-gray-800 transition-colors duration-300"
-            >
-              <span>Resume</span>
-              <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
-            </a>
-            <button className="cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-300">
-              Hire Me
-            </button>
+              <button className="cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-300">
+                <a href="#hire-me">Hire Me</a>
+              </button>
+            </div>
           </div>
 
           {}
@@ -135,7 +141,7 @@ export default function Navbar() {
                   <ExternalLink className="h-4 w-4" />
                 </a>
                 <button className="px-3 py-2.5 text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md transition-colors">
-                  Hire Me
+                  <a href="#hire-me">Hire Me</a>
                 </button>
               </div>
             </div>
