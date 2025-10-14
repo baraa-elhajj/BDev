@@ -52,7 +52,7 @@ export default function Navbar() {
         isScrolled
           ? "dark:bg-gray-900/95 backdrop-blur-lg shadow-lg"
           : "dark:bg-gray-900/80 backdrop-blur-md"
-      } border-b border-gray-200 dark:border-gray-800`}
+      } border-b border-[#36353d] dark:border-gray-800`}
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="flex h-14 sm:h-16 lg:h-20 items-center justify-between">
