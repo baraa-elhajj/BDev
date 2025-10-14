@@ -59,8 +59,8 @@ function App() {
         <div className="flex h-14 sm:h-16 lg:h-20 items-center justify-between">
           {}
           <div className="flex items-center">
-            <a href="#" className="flex items-center space-x-2 group">
-              <img className="size-20" src="src\assets\logo.png"></img>
+            <a href="#home" className="flex items-center space-x-2 group">
+              <img className="size-20" src="src\assets\images\logo.png"></img>
             </a>
           </div>
 
@@ -70,10 +70,10 @@ function App() {
               <a
                 key={link.text}
                 href={link.href}
-                className="text-sm lg:text-base font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors relative group"
+                className="text-sm lg:text-base font-medium text-[#36353d] dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors relative group"
               >
                 {link.text}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 dark:bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#36353d] dark:bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
@@ -82,12 +82,12 @@ function App() {
           <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
             <a
               href="#"
-              className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-medium text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-all hover:shadow-md"
+              className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-medium text-[#36353d] dark:text-white/80 border border-[#36353d] dark:border-gray-700 rounded-md hover:bg-[#36353d]/5 dark:hover:bg-gray-800 transition-colors duration-300"
             >
               <span>Resume</span>
               <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
             </a>
-            <button className="px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-gray-900 text-white dark:bg-gray-50 dark:text-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-200 transition-all shadow-sm hover:shadow-lg transform hover:scale-105">
+            <button className="cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-300">
               Hire Me
             </button>
           </div>
@@ -95,7 +95,7 @@ function App() {
           {}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
+            className="md:hidden p-2 text-[#36353d] dark:text-gray-300 rounded-md transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -112,27 +112,27 @@ function App() {
             isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="py-4 border-t border-gray-200 dark:border-gray-800">
+          <div className="py-2">
             <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.text}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="px-3 py-2.5 text-sm sm:text-base font-medium text-gray-600 dark:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  className="px-3 py-2.5 text-sm sm:text-base font-medium text-[#36353d] dark:text-gray-300 rounded-md transition-colors"
                 >
                   {link.text}
                 </a>
               ))}
-              <div className="pt-4 mt-2 border-t border-gray-200 dark:border-gray-700 flex flex-col space-y-2">
+              <div className="pt-2 mt-2 flex flex-col space-y-2">
                 <a
                   href="#"
-                  className="flex items-center justify-center space-x-2 px-3 py-2.5 text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  className="flex items-center justify-center space-x-2 px-3 py-2.5 text-sm font-medium border border-[#36353d] dark:border-gray-700 rounded-md transition-colors"
                 >
                   <span>Resume</span>
                   <ExternalLink className="h-4 w-4" />
                 </a>
-                <button className="px-3 py-2.5 text-sm font-medium bg-gray-900 text-white dark:bg-gray-50 dark:text-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors">
+                <button className="px-3 py-2.5 text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md transition-colors">
                   Hire Me
                 </button>
               </div>
