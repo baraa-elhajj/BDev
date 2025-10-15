@@ -19,7 +19,10 @@ const coderData = {
 
 const CoderProfileCard = () => {
   return (
-    <div className="z-0 w-full mx-auto bg-[#36353d] border-[#36353d] relative rounded-lg border shadow-lg">
+    <div
+      className="z-0 w-full mx-auto bg-[#36353d] border-[#36353d] relative rounded-lg 
+    border shadow-lg"
+    >
       {}
       <div className="flex flex-row">
         <div className="h-[2px] w-full bg-gradient-to-r from-transparent  to-[#ffbd59]"></div>
@@ -37,14 +40,20 @@ const CoderProfileCard = () => {
       </div>
 
       {}
-      <div className="overflow-hidden border-t-[2px] border-zinc-300 dark:border-indigo-900 px-4 lg:px-8 py-4 lg:py-8 relative">
+      <div className="overflow-hidden border-t-[2px] border-zinc-300 px-4 lg:px-8 py-4 lg:py-8 relative">
         {}
-        <div className="absolute -top-24 -left-24 w-56 h-56 bg-blue-600 rounded-full opacity-10 filter blur-3xl"></div>
-        <div className="absolute -bottom-24 -right-24 w-56 h-56 bg-pink-600 rounded-full opacity-10 filter blur-3xl"></div>
+        <div
+          className="absolute -top-24 -left-24 w-56 h-56 bg-blue-600 rounded-full opacity-10 
+        filter blur-3xl"
+        ></div>
+        <div
+          className="absolute -bottom-24 -right-24 w-56 h-56 bg-pink-600 rounded-full opacity-10 
+        filter blur-3xl"
+        ></div>
 
         <div className="relative flex">
           {}
-          <div className="hidden md:flex flex-col items-end pr-4 text-zinc-600 dark:text-gray-500 font-mono text-xs">
+          <div className="hidden md:flex flex-col items-end pr-4 text-zinc-600 font-mono text-xs">
             {Array.from(
               {
                 length: 12,
@@ -61,9 +70,7 @@ const CoderProfileCard = () => {
           <code className="font-mono text-xs md:text-sm lg:text-base w-full">
             <div>
               <span className="mr-2 text-blue-500">const</span>
-              <span className="mr-2 text-blue-400 dark:text-violet-400">
-                engineer
-              </span>
+              <span className="mr-2 text-blue-400">engineer</span>
               <span className="mr-2 text-white">=</span>
               <span className="text-blue-500">{"{"}</span>
             </div>
@@ -123,7 +130,10 @@ const CoderProfileCard = () => {
       </div>
 
       {}
-      <div className="px-4 lg:px-8 pb-4 mt-4 border-t border-zinc-300 pt-3 text-xs text-gray-300 flex justify-between items-center">
+      <div
+        className="px-4 lg:px-8 pb-4 mt-4 border-t border-zinc-300 pt-3 text-xs text-gray-300 
+      flex justify-between items-center"
+      >
         <span>UTF-8</span>
         <span>JavaScript</span>
         <span>Ln 12, Col 2</span>
@@ -139,36 +149,32 @@ export default function About() {
       className="flex flex-col items-start justify-start px-6 lg:px-20 py-21"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 items-center">
-        <div className="flex flex-col gap-4 items-start text-left order-2 lg:order-1 animate-fade-in-up">
-          <div className="relative">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffbd59] mb-6">
-              About Me
-            </h2>
+        <div className="flex flex-col gap-4 items-center text-center lg:text-left lg:items-start">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffbd59] mb-6">
+            About Me
+          </h2>
 
-            <div className="space-y-4 text-white sm:text-lg leading-relaxed max-w-3xl">
-              <p>
-                I'm a{" "}
-                <span className="text-[#ffbd59]">Full-Stack Engineer</span> with
-                4+ years of hands-on experience building and optimizing web
-                applications.
-              </p>
+          <div className="space-y-4 text-white sm:text-lg leading-relaxed max-w-3xl">
+            <p>
+              I'm a <span className="text-[#ffbd59]">Full-Stack Engineer</span>{" "}
+              with 4+ years of hands-on experience building and optimizing web
+              applications.
+            </p>
 
-              <p>
-                Having worked with several companies, I’ve gained a solid
-                understanding of both frontend and backend development.{" "}
-                <br></br>I’m always up for challenges that push my skills
-                further.
-              </p>
+            <p>
+              Having worked with several companies, I’ve gained a solid
+              understanding of both frontend and backend development. <br></br>
+              I’m always up for challenges that push my skills further.
+            </p>
 
-              <p>
-                In my free time, you’ll find me learning new technologies or
-                contributing to open-source projects to keep growing and sharing
-                knowledge.
-              </p>
-            </div>
+            <p>
+              In my free time, you’ll find me learning new technologies or
+              contributing to open-source projects to keep growing and sharing
+              knowledge.
+            </p>
           </div>
 
-          <div className="flex flex-wrap gap-2 sm:gap-3 my-2 sm:my-4">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 my-2 sm:my-4">
             <span
               className="px-3 sm:px-4 py-1 sm:py-2 border border-[#ffbd59] rounded-lg 
             text-white text-sm sm:text-base hover:bg-[#ffbd59] hover:text-[#36353d] 
@@ -199,7 +205,7 @@ export default function About() {
         </div>
 
         {}
-        <div className="hidden lg:block order-1 lg:order-2 animate-fade-in-up">
+        <div className="hidden lg:block order-1 lg:order-2">
           <CoderProfileCard />
         </div>
       </div>
