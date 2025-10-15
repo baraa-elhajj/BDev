@@ -3,6 +3,10 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 
 function App() {
+  useEffect(() => {
+    document.documentElement.classList.add("scroll-smooth");
+  }, []);
+
   return (
     <>
       <div className="flex flex-col min-h-screen">
