@@ -46,23 +46,18 @@ export default function Navbar() {
     <header
       className={`sticky top-0 w-full transition-all duration-300 bg-[#ffbd59] ${
         isScrolled
-          ? "bg-[#ffbd59]/90 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg"
-          : "dark:bg-gray-900/80 backdrop-blur-md"
-      } border-b border-[#36353d] dark:border-gray-800`}
+          ? "bg-[#ffbd59]/90 border-[#ffbd59]/90 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg"
+          : "border-[#ffbd59] dark:bg-gray-900/80 backdrop-blur-md"
+      } border-b dark:border-gray-800`}
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="flex h-14 sm:h-16 lg:h-20 items-center justify-between">
-          {}
-          <div className="flex items-center">
-            <a href="#home" className="flex items-center space-x-2 group">
-              <img
-                className="size-15 sm:size-20 ml-2"
-                src="src\assets\images\logo.png"
-              ></img>
-            </a>
-          </div>
+          <img
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="cursor-pointer size-15 sm:size-20 ml-2"
+            src="src\assets\images\logo.png"
+          ></img>
 
-          {}
           <div className="flex items-center space-x-6">
             <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
               {navLinks.map((link) => (
