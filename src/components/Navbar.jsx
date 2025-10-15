@@ -44,11 +44,11 @@ export default function Navbar() {
 
   return (
     <header
-      className={`z-10 sticky top-0 w-full transition-all duration-300 bg-[#ffbd59] ${
+      className={`z-10 sticky top-0 bg-[#ffbd59] w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-[#ffbd59]/90 border-[#ffbd59]/90 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg"
-          : "border-[#ffbd59] dark:bg-gray-900/80 backdrop-blur-md"
-      } border-b dark:border-gray-800`}
+          ? "bg-[#ffbd59]/85 border-[#ffbd59]/85 backdrop-blur-lg shadow-lg"
+          : "border-[#ffbd59] backdrop-blur-md"
+      } border-b`}
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         <div className="flex h-14 sm:h-16 lg:h-20 items-center justify-between">
