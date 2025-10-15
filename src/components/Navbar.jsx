@@ -25,10 +25,6 @@ export default function Navbar() {
 
   const navLinks = [
     {
-      href: "#home",
-      text: "Home",
-    },
-    {
       href: "#about",
       text: "About",
     },
@@ -73,10 +69,14 @@ export default function Navbar() {
                 <a
                   key={link.text}
                   href={link.href}
-                  className="text-sm lg:text-base font-medium text-[#36353d] dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors relative group"
+                  className="text-sm lg:text-base font-medium text-[#36353d] dark:text-gray-400 
+                  hover:text-gray-900 dark:hover:text-white transition-colors relative group"
                 >
                   {link.text}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#36353d] dark:bg-gray-100 transition-all duration-300 group-hover:w-full"></span>
+                  <span
+                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#36353d] dark:bg-gray-100 
+                  transition-all duration-300 group-hover:w-full"
+                  ></span>
                 </a>
               ))}
             </nav>
@@ -87,12 +87,19 @@ export default function Navbar() {
                 href="/documents/BaraaElHajj-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-medium text-[#36353d] dark:text-white/80 border border-[#36353d] dark:border-gray-700 rounded-md hover:bg-[#36353d]/5 dark:hover:bg-gray-800 transition-colors duration-300"
+                className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 
+                text-xs lg:text-sm font-medium text-[#36353d] dark:text-white/80 border 
+                border-[#36353d] dark:border-gray-700 rounded-md hover:bg-[#36353d] 
+                hover:text-white dark:hover:bg-gray-800 transition-colors duration-300"
               >
                 <span>Resume</span>
                 <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
               </a>
-              <button className="cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-300">
+              <button
+                className="cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm 
+              font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 
+              rounded-md hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors duration-300"
+              >
                 <a href="#hire-me">Hire Me</a>
               </button>
             </div>
@@ -125,7 +132,8 @@ export default function Navbar() {
                   key={link.text}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="px-3 py-2.5 text-sm sm:text-base font-medium text-[#36353d] dark:text-gray-300 rounded-md transition-colors"
+                  className="px-3 py-2.5 text-sm sm:text-base font-medium text-[#36353d] 
+                  dark:text-gray-300 rounded-md transition-colors"
                 >
                   {link.text}
                 </a>
@@ -135,14 +143,16 @@ export default function Navbar() {
                   href="/documents/BaraaElHajj-resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 px-3 py-2.5 text-sm font-medium border border-[#36353d] dark:border-gray-700 rounded-md transition-colors"
+                  className="flex items-center justify-center space-x-2 px-3 py-2.5 text-sm font-medium 
+                  border border-[#36353d] dark:border-gray-700 rounded-md transition-colors"
                 >
                   <span>Resume</span>
                   <ExternalLink className="h-4 w-4" />
                 </a>
                 <button
                   onClick={() => setIsMenuOpen(false)}
-                  className="px-3 py-2.5 text-sm font-medium bg-[#36353d] text-white dark:bg-gray-50 dark:text-gray-900 rounded-md transition-colors"
+                  className="px-3 py-2.5 text-sm font-medium bg-[#36353d] text-white 
+                  dark:bg-gray-50 dark:text-gray-900 rounded-md transition-colors"
                 >
                   <a href="#hire-me">Hire Me</a>
                 </button>
