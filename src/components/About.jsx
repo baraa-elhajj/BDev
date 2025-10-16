@@ -12,7 +12,7 @@ export default function About() {
             About Me
           </h2>
 
-          <div className="space-y-4 text-white sm:text-lg leading-relaxed max-w-3xl">
+          <div className="space-y-4 text-white/85 sm:text-lg leading-relaxed max-w-3xl">
             <p>
               I'm a <span className="text-[#ffbd59]">Full-Stack Engineer</span>{" "}
               with 4+ years of hands-on experience building and optimizing web

@@ -29,8 +29,8 @@ export default function Navbar() {
       text: "About",
     },
     {
-      href: "#experience",
-      text: "Experience",
+      href: "#services",
+      text: "Services",
     },
     {
       href: "#projects",
