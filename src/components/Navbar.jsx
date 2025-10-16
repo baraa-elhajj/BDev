@@ -37,7 +37,7 @@ export default function Navbar() {
           transition-all duration-300
         ${
           isScrolled
-            ? "bg-[#ffbd59]/85 border-[#ffbd59]/85 backdrop-blur-lg shadow-lg"
+            ? "bg-[#ffbd59] border-[#ffbd59] md:bg-[#ffbd59]/85 md:border-[#ffbd59]/85 backdrop-blur-lg shadow-lg"
             : "backdrop-blur-md"
         }`}
       >
@@ -108,10 +108,9 @@ export default function Navbar() {
         <div
           className={`bg-[#ffbd59] absolute left-0 w-full md:hidden transition-all duration-300 ease-in-out 
             ${isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
-            ${isScrolled && "bg-[#ffbd59]/85 border-[#ffbd59]/85"}
           `}
         >
-          <div className="flex flex-col space-y-1 py-2">
+          <div className="flex flex-col space-y-1 py-2 mx-3">
             {navLinks.map((link) => (
               <a
                 key={link.text}
