@@ -2,10 +2,7 @@ import { BriefcaseBusiness } from "lucide-react";
 
 export default function Home() {
   return (
-    <section
-      id="home"
-      className="flex md:flex-row items-center justify-between px-6 lg:px-16 py-16"
-    >
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 lg:px-16 py-16">
       <div className="space-y-6 text-center md:text-left md:w-1/2">
         <div className="block md:hidden mb-4">
           <img

@@ -19,7 +19,7 @@ const services = [
   {
     title: "Deployment & Hosting",
     description:
-      "I usually use Heroku or Vercel for deployment. I may use Google for hosting depending on the needs and required services.",
+      "I usually use Heroku or Vercel for deployment and hosting. I may use Google for hosting depending on the needs and required services.",
     badges: ["Vercel", "Heroku"],
     icon: <Server size={25} />,
   },

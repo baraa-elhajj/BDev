@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="bg-[#36353d]">
+      <div id="home" className="bg-[#36353d]">
         <Navbar />
         <Home />
         <About />
