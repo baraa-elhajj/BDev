@@ -11,13 +11,13 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <main className="bg-[#36353d]">
+      <div className="bg-[#36353d]">
+        <Navbar />
         <Home />
         <About />
         <Services />
-      </main>
-      <footer className="bg-gray-800 p-5"></footer>
+        <footer className="bg-gray-800 p-5"></footer>
+      </div>
     </>
   );
 }
