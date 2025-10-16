@@ -4,8 +4,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-6 
-      lg:px-16 py-16"
+      className="flex md:flex-row items-center justify-between px-6 lg:px-16 py-16"
     >
       <div className="md:w-1/2 space-y-6 text-center md:text-left">
         <div className="block md:hidden mb-4">
@@ -28,7 +27,7 @@ export default function Home() {
           to push boundaries and turn ideas into reality.
         </p>
 
-        <div className="flex items-center justify-center sm:justify-start space-x-2 lg:space-x-3">
+        <div className="flex items-center justify-center md:justify-start space-x-2 lg:space-x-3">
           <a
             href="#projects"
             className="lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-semibold 
