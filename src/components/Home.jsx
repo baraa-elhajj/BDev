@@ -6,7 +6,7 @@ export default function Home() {
       id="home"
       className="flex md:flex-row items-center justify-between px-6 lg:px-16 py-16"
     >
-      <div className="md:w-1/2 space-y-6 text-center md:text-left">
+      <div className="space-y-6 text-center md:text-left md:w-1/2">
         <div className="block md:hidden mb-4">
           <img
             src="src/assets/images/profile.png"
@@ -27,29 +27,27 @@ export default function Home() {
           to push boundaries and turn ideas into reality.
         </p>
 
-        <div className="flex items-center justify-center md:justify-start space-x-2 lg:space-x-3">
+        <div className="flex space-x-3 items-center justify-center md:justify-start">
           <a
             href="#projects"
-            className="lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-semibold 
-                  text-white/85 dark:text-white/80 border border-[#ffbd59] dark:border-gray-700 
-                  rounded-md hover:bg-[#ffbd59] hover:text-[#36353d]/95 dark:hover:bg-gray-800 
-                  transition-colors duration-300"
+            className="px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-semibold text-white/85 
+            border border-[#ffbd59] rounded-md hover:bg-[#ffbd59] hover:text-[#36353d]/95 
+            transition-colors duration-300"
           >
             Some of my projects
           </a>
           <button
             className="flex items-center justify-center cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 
-                  text-xs lg:text-sm font-semibold bg-[#ffbd59] text-[#36353d]/95 dark:bg-gray-50 
-                  dark:text-gray-900 rounded-md hover:bg-[#ffbd59]/80 dark:hover:bg-gray-200 
-                  transition-colors duration-300"
+            text-xs lg:text-sm font-semibold bg-[#ffbd59] text-[#36353d]/95 rounded-md 
+            hover:bg-[#ffbd59]/80 transition-colors duration-300"
           >
             <a href="#hire-me">Hire Me</a>
-            <BriefcaseBusiness className="h-3 w-3 ml-1.5 mb-0.5 lg:h-4 lg:w-4" />
+            <BriefcaseBusiness className="h-3 lg:h-4 w-3 lg:w-4 ml-1.5 mb-0.5" />
           </button>
         </div>
       </div>
 
-      <div className="hidden md:flex md:w-1/2 justify-center">
+      <div className="hidden md:flex w-1/2 justify-center">
         <img
           src="src/assets/images/profile.png"
           alt="Profile"
