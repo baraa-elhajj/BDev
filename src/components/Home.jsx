@@ -1,14 +1,16 @@
 import { BriefcaseBusiness } from "lucide-react";
+import Orbit from "./ui/Orbit";
 
 export default function Home() {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between px-6 lg:px-16 py-16">
       <div className="space-y-6 text-center md:text-left md:w-1/2">
+        {/* Mobile */}
         <div className="block md:hidden mb-4">
           <img
             src="src/assets/images/profile.png"
             alt="Profile"
-            className="w-30 h-30 rounded-full object-cover mx-auto"
+            className="w-40 h-50 rounded-full object-cover mx-auto "
           />
         </div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffbd59] leading-tight">
@@ -44,12 +46,9 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Desktop  */}
       <div className="hidden md:flex w-1/2 justify-center">
-        <img
-          src="src/assets/images/profile.png"
-          alt="Profile"
-          className="w-100 h-100"
-        />
+        <Orbit />
       </div>
     </section>
   );

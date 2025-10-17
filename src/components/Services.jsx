@@ -39,7 +39,7 @@ export default function Services() {
       className="flex flex-col items-center text-center lg:text-left lg:items-start px-6 lg:px-16 py-25"
     >
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffbd59] mb-10">
-        What I do
+        My Services
       </h2>
 
       <div className="space-y-4 text-white/85 text-md sm:text-lg leading-relaxed max-w-3xl mb-8">
