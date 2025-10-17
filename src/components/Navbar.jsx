@@ -75,7 +75,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 
                 text-xs lg:text-sm font-medium text-[#36353d] border border-[#36353d] rounded-md 
-                hover:bg-[#36353d]hover:text-white transition-colors duration-300"
+                hover:bg-[#36353d] hover:text-white transition-colors duration-300"
               >
                 <span>Resume</span>
                 <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
