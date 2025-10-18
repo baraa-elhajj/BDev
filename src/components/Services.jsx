@@ -6,14 +6,28 @@ const services = [
     title: "Frontend Development",
     description:
       "I can create responsive and modern web interfaces using React, Next.js, TailwindCSS, and more.",
-    badges: ["React", "Next.js", "TailwindCSS", "ChakraUI", "SeraUI"],
+    badges: [
+      "React",
+      "Next.js",
+      "TailwindCSS",
+      "ChakraUI",
+      "SeraUI",
+      "Bootstrap",
+    ],
     icon: <LayoutGrid size={25} />,
   },
   {
     title: "Full-Stack Development",
     description:
       "I design and build web applications using MERN stack with proper architecture and state management.",
-    badges: ["MongoDB", "Express.js", "React", "Node.js", "TailwindCSS"],
+    badges: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "Next.js",
+      "TailwindCSS",
+    ],
     icon: <Code size={25} />,
   },
   {
