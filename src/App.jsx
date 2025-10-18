@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Services from "./components/Services";
 import Navbar from "./components/Navbar";
 import { useEffect } from "react";
+import Projects from "./components/Projects";
 
 function App() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
         <Home />
         <About />
         <Services />
+        <Projects />
         <footer className="bg-gray-800 p-5"></footer>
       </div>
     </>
