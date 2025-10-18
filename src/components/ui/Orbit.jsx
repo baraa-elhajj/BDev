@@ -1,4 +1,5 @@
 import React, { useEffect, useState, memo } from "react";
+
 const iconComponents = {
   html: {
     component: () => (
@@ -92,9 +93,9 @@ SkillIcon.displayName = "SkillIcon";
 const skillsConfig = [
   {
     id: "html",
-    orbitRadius: 210,
-    size: 40,
-    speed: 0.5,
+    orbitRadius: 180,
+    size: 35,
+    speed: 0.2,
     iconType: "html",
     phaseShift: 0,
     glowColor: "cyan",
@@ -102,9 +103,9 @@ const skillsConfig = [
   },
   {
     id: "css",
-    orbitRadius: 210,
-    size: 45,
-    speed: 0.5,
+    orbitRadius: 180,
+    size: 35,
+    speed: 0.2,
     iconType: "css",
     phaseShift: Math.PI / 3,
     glowColor: "cyan",
@@ -112,9 +113,9 @@ const skillsConfig = [
   },
   {
     id: "javascript",
-    orbitRadius: 210,
-    size: 40,
-    speed: 0.5,
+    orbitRadius: 180,
+    size: 35,
+    speed: 0.2,
     iconType: "javascript",
     phaseShift: (2 * Math.PI) / 3,
     glowColor: "cyan",
@@ -122,9 +123,9 @@ const skillsConfig = [
   },
   {
     id: "react",
-    orbitRadius: 210,
-    size: 50,
-    speed: 0.5,
+    orbitRadius: 180,
+    size: 35,
+    speed: 0.2,
     iconType: "react",
     phaseShift: Math.PI,
     glowColor: "purple",
@@ -132,9 +133,9 @@ const skillsConfig = [
   },
   {
     id: "node",
-    orbitRadius: 210,
-    size: 45,
-    speed: 0.5,
+    orbitRadius: 180,
+    size: 35,
+    speed: 0.2,
     iconType: "node",
     phaseShift: (-2 * Math.PI) / 3,
     glowColor: "purple",
@@ -142,18 +143,18 @@ const skillsConfig = [
   },
   {
     id: "tailwind",
-    orbitRadius: 210,
-    size: 40,
-    speed: 0.5,
+    orbitRadius: 180,
+    size: 35,
+    speed: 0.2,
     iconType: "tailwind",
     phaseShift: (-1 * Math.PI) / 3,
     glowColor: "purple",
     label: "Tailwind CSS",
   },
 ];
+
 const OrbitingSkill = memo(({ config, angle }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const { orbitRadius, size, iconType, label } = config;
+  const { orbitRadius, size, iconType } = config;
   const x = Math.cos(angle) * orbitRadius;
   const y = Math.sin(angle) * orbitRadius;
   return (
@@ -163,34 +164,21 @@ const OrbitingSkill = memo(({ config, angle }) => {
         width: `${size}px`,
         height: `${size}px`,
         transform: `translate(calc(${x}px - 50%), calc(${y}px - 50%))`,
-        zIndex: isHovered ? 20 : 10,
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div
         className={`
           relative w-full h-full p-2 bg-gray-800/90 backdrop-blur-sm
           rounded-full flex items-center justify-center
           transition-all duration-300 cursor-pointer
-          ${isHovered ? "scale-125 shadow-2xl" : "shadow-lg hover:shadow-xl"}
         `}
-        style={{
-          boxShadow: isHovered
-            ? `0 0 30px ${iconComponents[iconType]?.color}40, 0 0 60px ${iconComponents[iconType]?.color}20`
-            : undefined,
-        }}
       >
         <SkillIcon type={iconType} />
-        {isHovered && (
-          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-900/95 backdrop-blur-sm rounded text-xs text-white whitespace-nowrap pointer-events-none">
-            {label}
-          </div>
-        )}
       </div>
     </div>
   );
 });
+
 OrbitingSkill.displayName = "OrbitingSkill";
 const GlowingOrbitPath = memo(
   ({ radius, glowColor = "cyan", animationDelay = 0 }) => {
@@ -201,15 +189,17 @@ const GlowingOrbitPath = memo(
         border: "rgba(6, 182, 212, 0.3)",
       },
       purple: {
-        primary: "rgb(237, 241, 244)",
-        secondary: "rgb(237, 241, 244)",
-        border: "rgb(237, 241, 244)",
+        primary: "rgb(255, 189, 89)",
+        secondary: "rgb(64, 62, 72)",
+        border: "rgb(64, 62, 72)",
       },
     };
+
     const colors = glowColors[glowColor] || glowColors.cyan;
     return (
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full 
+        pointer-events-none"
         style={{
           width: `${radius * 2}px`,
           height: `${radius * 2}px`,
@@ -220,7 +210,8 @@ const GlowingOrbitPath = memo(
         <div
           className="absolute inset-0 rounded-full animate-pulse"
           style={{
-            background: `radial-gradient(circle, transparent 30%, ${colors.secondary} 70%, ${colors.primary} 100%)`,
+            background: `radial-gradient(circle, transparent 30%, ${colors.secondary} 70%, 
+            ${colors.primary} 100%)`,
             boxShadow: `0 0 60px ${colors.primary}, inset 0 0 60px ${colors.secondary}`,
             animation: "pulse 4s ease-in-out infinite",
             animationDelay: `${animationDelay}s`,
@@ -239,22 +230,27 @@ const GlowingOrbitPath = memo(
     );
   }
 );
+
 GlowingOrbitPath.displayName = "GlowingOrbitPath";
 
 export default function Orbit() {
   const [time, setTime] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+
   useEffect(() => {
     if (isPaused) return;
     let animationFrameId;
     let lastTime = performance.now();
+
     const animate = (currentTime) => {
       const deltaTime = (currentTime - lastTime) / 1000;
       lastTime = currentTime;
       setTime((prevTime) => prevTime + deltaTime);
       animationFrameId = requestAnimationFrame(animate);
     };
+
     animationFrameId = requestAnimationFrame(animate);
+
     return () => cancelAnimationFrame(animationFrameId);
   }, [isPaused]);
 
@@ -270,12 +266,14 @@ export default function Orbit() {
       delay: 1.5,
     },
   ];
+
   return (
     <main className="w-full flex items-center justify-center overflow-hidden">
       {}
 
       <div
-        className="absolute w-[calc(100vw-40px)] h-[calc(100vw-40px)] md:w-[450px] md:h-[450px] flex items-center justify-center mb-4"
+        className="absolute w-[calc(100vw-40px)] h-[calc(100vw-40px)] md:w-[450px] md:h-[450px] 
+        flex items-center justify-center mb-2.5"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -296,7 +294,8 @@ export default function Orbit() {
           );
         })}
       </div>
-      <div className="relative mb-4">
+
+      <div className="z-10 relative mb-4">
         <img
           src="src/assets/images/profile.png"
           alt="Profile"
