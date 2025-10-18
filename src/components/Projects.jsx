@@ -42,7 +42,7 @@ export default function Projects() {
       id="projects"
       className="flex flex-col items-center text-center lg:text-left lg:items-start px-6 lg:px-16 py-25"
     >
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffbd59] mb-10">
+      <h2 className="text-3xl sm:text-4xl font-bold text-[#ffbd59] mb-5">
         Featured Projects
       </h2>
 

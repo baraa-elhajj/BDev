@@ -4,11 +4,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-start justify-start px-6 lg:px-16 py-25"
+      className="flex flex-col items-start justify-start px-6 lg:px-16 pt-25"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 items-center">
         <div className="flex flex-col gap-4 items-center text-center lg:text-left lg:items-start">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffbd59] mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#ffbd59] mb-3">
             About Me
           </h2>
 

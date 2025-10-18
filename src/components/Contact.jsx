@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center text-center px-6 lg:px-16 py-25"
+      className="flex flex-col items-center text-center px-6 lg:px-16 pt-25"
     >
       <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[#ffbd59] mb-5">
         Get in Touch
