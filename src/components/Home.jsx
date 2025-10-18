@@ -48,7 +48,12 @@ export default function Home() {
 
       {/* Desktop  */}
       <div className="hidden md:flex w-1/2 justify-center">
-        <Orbit />
+        {/* <Orbit /> */}
+        <img
+          src="src/assets/images/profile.png"
+          alt="Profile"
+          className="w-100 h-100"
+        />
       </div>
     </section>
   );
