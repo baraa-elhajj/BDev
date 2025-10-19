@@ -1,29 +1,36 @@
 import { SendHorizontalIcon } from "lucide-react";
-import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export default function HireMe() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const formRef = useRef();
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // TODO: Implement EmailJS service to send email
-    alert("Form submitted! I'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          alert("✅ Message sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          alert("❌ Failed to send message. Please try again.");
+          console.error(error);
+        }
+      );
   };
 
   return (
     <section
       id="hire-me"
-      className="flex flex-col items-center justify-center min-h-screen w-full  text-white px-4 py-25"
+      className="flex flex-col items-center justify-center min-h-screen w-full text-white px-4 py-25"
     >
       <h2 className="text-4xl font-bold mb-6 text-[#ffbd59]">Hire Me</h2>
       <p className="text-gray-300 mb-10 max-w-md text-center">
@@ -32,15 +39,14 @@ export default function HireMe() {
       </p>
 
       <form
-        onSubmit={handleSubmit}
+        ref={formRef}
+        onSubmit={sendEmail}
         className="flex flex-col w-full max-w-2xl text-white/80 bg-[#2f2f37] p-8 rounded-lg shadow-lg"
       >
         <input
           type="text"
-          name="name"
+          name="from_name"
           placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
           required
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
           focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
@@ -48,10 +54,8 @@ export default function HireMe() {
 
         <input
           type="email"
-          name="email"
+          name="from_email"
           placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
           required
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
           focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
@@ -61,8 +65,6 @@ export default function HireMe() {
           type="text"
           name="subject"
           placeholder="Subject"
-          value={formData.subject}
-          onChange={handleChange}
           required
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
           focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
@@ -71,8 +73,6 @@ export default function HireMe() {
         <textarea
           name="message"
           placeholder="Describe your project . . ."
-          value={formData.message}
-          onChange={handleChange}
           required
           rows={6}
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
