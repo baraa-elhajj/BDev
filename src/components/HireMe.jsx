@@ -1,12 +1,15 @@
 import { SendHorizontalIcon } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function HireMe() {
   const formRef = useRef();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs
       .sendForm(
@@ -17,14 +20,16 @@ export default function HireMe() {
       )
       .then(
         () => {
-          alert("✅ Message sent successfully!");
+          toast.success("Email sent! Thank you for reaching out.");
           formRef.current.reset();
         },
         (error) => {
-          alert("❌ Failed to send message. Please try again.");
-          console.error(error);
+          toast.error("Failed to send email. Please try again later.");
+          console.error("Failed to send email: ", error);
         }
       );
+
+    setIsLoading(false);
   };
 
   return (
@@ -40,7 +45,7 @@ export default function HireMe() {
 
       <form
         ref={formRef}
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit}
         className="flex flex-col w-full max-w-2xl text-white/80 bg-[#2f2f37] p-8 rounded-lg shadow-lg"
       >
         <input
@@ -72,7 +77,7 @@ export default function HireMe() {
 
         <textarea
           name="message"
-          placeholder="Describe your project . . ."
+          placeholder="Describe your project..."
           required
           rows={6}
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
@@ -81,9 +86,15 @@ export default function HireMe() {
 
         <button
           type="submit"
-          className=" group flex items-center justify-center cursor-pointer px-4 lg:px-6 py-1.5 lg:py-3 
-            text-xs lg:text-sm font-semibold bg-[#ffbd59] text-[#36353d]/95 rounded-md 
-            hover:bg-[#ffbd59]/80 transition-colors duration-300"
+          disabled={isLoading}
+          className={`group flex items-center justify-center px-4 lg:px-6 py-1.5 lg:py-3 
+            text-xs lg:text-sm font-semibold rounded-md
+            transition-colors duration-300
+            ${
+              isLoading
+                ? "bg-[#ffbd59]/60 text-[#36353d]/50 cursor-not-allowed"
+                : "bg-[#ffbd59] text-[#36353d]/95 hover:bg-[#ffbd59]/80 cursor-pointer"
+            }`}
         >
           Send Message
           <SendHorizontalIcon className="h-3 lg:h-4 w-3 lg:w-4 ml-1.5 duration-300 group-hover:translate-x-1" />
