@@ -70,7 +70,7 @@ export default function HireMe() {
 
         <textarea
           name="message"
-          placeholder="Describe your project here..."
+          placeholder="Describe your project . . ."
           value={formData.message}
           onChange={handleChange}
           required

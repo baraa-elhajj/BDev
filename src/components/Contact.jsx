@@ -16,7 +16,8 @@ export default function Contact() {
       <div className="flex space-x-8">
         <a
           href="mailto:baraa.w.hajj@gmail.com"
-          className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg transition hover:scale-110 bg-[#f7f5f2]"
+          className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg bg-[#f7f5f2]
+          transition duration-300 hover:scale-105"
         >
           <SiGmail className="size-5 sm:size-6 text-[#EA4335]" />
         </a>
@@ -25,7 +26,8 @@ export default function Contact() {
           href="https://linkedin.com/in/baraa-elhajj"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg transition hover:scale-110 bg-[#f7f5f2]"
+          className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg bg-[#f7f5f2]
+          transition duration-300 hover:scale-105"
         >
           <SiLinkedin className="size-5 sm:size-6 text-[#0077B5]" />
         </a>
@@ -33,7 +35,8 @@ export default function Contact() {
           href="https://github.com/baraa-elhajj"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg transition hover:scale-110 bg-[#f7f5f2]"
+          className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg bg-[#f7f5f2]
+          transition duration-300 hover:scale-105"
         >
           <SiGithub className="size-5 sm:size-6 text-gray-800" />
         </a>
@@ -42,7 +45,8 @@ export default function Contact() {
           href="https://wa.me/96179319246"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg transition hover:scale-110 bg-[#f7f5f2]"
+          className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg bg-[#f7f5f2]
+          transition duration-300 hover:scale-105"
         >
           <SiWhatsapp className="size-5 sm:size-6 text-[#25D366]" />
         </a>
