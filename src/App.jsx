@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { useEffect } from "react";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import HireMe from "./components/HireMe";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
         <Services />
         <Projects />
         <Contact />
+        <HireMe />
         <footer className="bg-gray-800 p-5"></footer>
       </div>
     </>
