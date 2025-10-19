@@ -96,8 +96,24 @@ export default function HireMe() {
                 : "bg-[#ffbd59] text-[#36353d]/95 hover:bg-[#ffbd59]/80 cursor-pointer"
             }`}
         >
-          Send Message
-          <SendHorizontalIcon className="h-3 lg:h-4 w-3 lg:w-4 ml-1.5 duration-300 group-hover:translate-x-1" />
+          {isLoading ? (
+            <span className="flex items-center gap-2">
+              <svg
+                className="h-4 w-4 text-[#36353d] animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2a10 10 0 1 1-10 10h4a6 6 0 1 0 6-6V2z" />
+              </svg>
+              Sending...
+            </span>
+          ) : (
+            <>
+              Send Message
+              <SendHorizontalIcon className="h-3 lg:h-4 w-3 lg:w-4 ml-1.5 duration-300 group-hover:translate-x-1" />
+            </>
+          )}
         </button>
       </form>
     </section>
