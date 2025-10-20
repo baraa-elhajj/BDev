@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
+import logo from "../assets/images/logo.png";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +46,8 @@ export default function Navbar() {
           <a href="#home">
             <img
               className="cursor-pointer size-15 sm:size-20 ml-2"
-              src="src\assets\images\logo.png"
+              src={logo}
+              alt="logo"
             />
           </a>
 

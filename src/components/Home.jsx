@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BriefcaseBusiness } from "lucide-react";
+import profile from "../assets/images/profile.png";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         {/* Mobile */}
         <div className="block md:hidden mb-4">
           <img
-            src="src/assets/images/profile.png"
+            src={profile}
             alt="Profile"
             className="w-40 h-50 rounded-full object-cover mx-auto "
           />

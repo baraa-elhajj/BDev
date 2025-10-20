@@ -1,13 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import bdev from "../assets/images/projects/bdev.png";
+import reactlab from "../assets/images/projects/reactlab.png";
+import todoapp from "../assets/images/projects/todoapp.png";
+import weatherly from "../assets/images/projects/weatherly.png";
 
 const projects = [
   {
     name: "Weatherly",
     description:
       "Weatherly fetches real-time weather data and displays temperature and weather details in a cool card design. Built using React, Next.js and Tailwind CSS.",
-    imageSrc: "src/assets/images/projects/weatherly.png",
+    imageSrc: `${weatherly}`,
     githubLink: "https://github.com/baraa-elhajj/Weatherly",
     demoLink: "https://weatherly-lb.vercel.app/",
   },
@@ -15,7 +19,7 @@ const projects = [
     name: "Todo-App",
     description:
       "A Todo manager application built with React, Supabase, Chakra UI, and React Context API. This project demonstrates clean state management, database integration, and a modular architecture.",
-    imageSrc: "src/assets/images/projects/todoapp.png",
+    imageSrc: `${todoapp}`,
     githubLink: "https://github.com/baraa-elhajj/Todo-App",
     demoLink: "https://todoapp-lb.vercel.app/",
   },
@@ -23,7 +27,7 @@ const projects = [
     name: "BDev",
     description:
       "Built modern and responsive personal website using React, Tailwind CSS, and Sera UI.",
-    imageSrc: "src/assets/images/projects/bdev.png",
+    imageSrc: `${bdev}`,
     githubLink: "https://github.com/baraa-elhajj/BDev",
     demoLink: "",
   },
@@ -31,7 +35,7 @@ const projects = [
     name: "React Lab",
     description:
       "A simple playground of mini React apps. It's a modular project designed to explore, test, and showcase a variety of React features, libraries, and patterns — all in one place.",
-    imageSrc: "src/assets/images/projects/reactlab.png",
+    imageSrc: `${reactlab}`,
     githubLink: "https://github.com/baraa-elhajj/React-Lab",
     demoLink: "",
   },
