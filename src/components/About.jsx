@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import CoderProfileCard from "./ui/CoderProfileCard";
 
 export default function About() {
@@ -8,31 +9,58 @@ export default function About() {
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 items-center">
         <div className="flex flex-col gap-4 items-center text-center lg:text-left lg:items-start">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#ffbd59] mb-3">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-3xl sm:text-4xl font-bold text-[#ffbd59] mb-3"
+          >
             About Me
-          </h2>
+          </motion.h2>
 
           <div className="space-y-4 text-white/85 sm:text-lg leading-relaxed max-w-3xl">
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+            >
               I'm a <span className="text-[#ffbd59]">Full-Stack Engineer</span>{" "}
               with 4+ years of hands-on experience building and optimizing web
               applications.
-            </p>
+            </motion.p>
 
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+            >
               Having worked with several companies, I’ve gained a solid
               understanding of both frontend and backend development. <br></br>
               I’m always up for challenges that push my skills further.
-            </p>
+            </motion.p>
 
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+            >
               In my free time, you’ll find me learning new technologies or
               contributing to open-source projects to keep growing and sharing
               knowledge.
-            </p>
+            </motion.p>
           </div>
 
-          <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 my-2 sm:my-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 my-2 sm:my-4"
+          >
             <span
               className="px-3 sm:px-4 py-1 sm:py-2 border border-[#ffbd59] rounded-lg 
             text-white text-sm sm:text-base hover:bg-[#ffbd59] hover:text-[#36353d] 
@@ -54,18 +82,29 @@ export default function About() {
             >
               Problem Solver
             </span>
-          </div>
+          </motion.div>
 
-          <p className="italic text-white text-xs sm:text-sm lg:text-sm max-w-lg leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="italic text-white text-xs sm:text-sm lg:text-sm max-w-lg leading-relaxed"
+          >
             “✨ JavaScript lover ⚡ Code. Build. Learn. Repeat 💻 Lifelong
             learner”
-          </p>
+          </motion.p>
         </div>
 
-        {}
-        <div className="hidden lg:block order-1 lg:order-2">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="hidden lg:block order-1 lg:order-2"
+        >
           <CoderProfileCard />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
