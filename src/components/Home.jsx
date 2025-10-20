@@ -74,11 +74,7 @@ export default function Home() {
         transition={{ duration: 0.7 }}
         className="hidden md:flex w-1/2 justify-center"
       >
-        <img
-          src="src/assets/images/profile.png"
-          alt="Profile"
-          className="w-100 h-100"
-        />
+        <img src={profile} alt="Profile" className="w-100 h-100" />
       </motion.div>
     </section>
   );
