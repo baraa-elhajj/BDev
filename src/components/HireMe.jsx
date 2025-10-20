@@ -53,7 +53,7 @@ export default function HireMe() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1, duration: 0.7 }}
-        className="text-gray-300 mb-10 max-w-md text-center"
+        className="text-gray-300 mb-5 max-w-md text-center"
       >
         Interested in working together? Fill out the form below and I’ll get
         back to you as soon as possible.
