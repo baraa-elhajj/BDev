@@ -1,16 +1,35 @@
-# React + Vite
+# BDev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**My personal website.**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+- **Frontend:** [React](https://react.dev/) + Vite, [TailwindCSS](https://tailwindcss.com/) for styling.
+- **UI/UX:** Used some components from [Sera UI](https://seraui.com/), [Lucide](https://lucide.dev/icons/) & [React Icons](https://react-icons.github.io/react-icons/) icons, Framer Motion for animations, and [React Hot Toast](https://react-hot-toast.com/) for cool toasts.
+- **Email Service:** Used [EmailJS](https://www.emailjs.com/) to easily configure and send emails.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Desktop View
+
+![Desktop view Screenshot](./public/screenshots/bdev-desktop.png)
+
+### Mobile View
+
+<img src="public/screenshots/bdev-mobile.png" alt="Alt text" width="300" height="550">
+
+---
+
+## Live Demo
+
+Deployed on Vercel 👉 <a href="https://bdev-lb.vercel.app" target="_blank">bdev-lb.vercel.app</a>
+
+---
+
+## Contribution
+
+Love this project? **Drop** a star ⭐ and feel free to **fork** it or **suggest improvements** if you find something cool!
