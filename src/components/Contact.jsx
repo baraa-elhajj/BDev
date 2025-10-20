@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { SiGithub, SiLinkedin, SiGmail, SiWhatsapp } from "react-icons/si";
 
 export default function Contact() {
@@ -6,14 +7,32 @@ export default function Contact() {
       id="contact"
       className="flex flex-col items-center text-center px-6 lg:px-16 pt-25"
     >
-      <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[#ffbd59] mb-5">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[#ffbd59] mb-5"
+      >
         Get in Touch
-      </h2>
-      <p className="text-white/80 text-center mb-10 max-w-md">
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.7 }}
+        className="text-white/80 text-center mb-10 max-w-md"
+      >
         Feel free to reach out to me through any of the following platforms.
-      </p>
+      </motion.p>
 
-      <div className="flex space-x-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.7 }}
+        className="flex space-x-8"
+      >
         <a
           href="mailto:baraa.w.hajj@gmail.com"
           className="p-2 sm:p-4 rounded-full shadow-md hover:shadow-lg bg-[#f7f5f2]
@@ -50,7 +69,7 @@ export default function Contact() {
         >
           <SiWhatsapp className="size-5 sm:size-6 text-[#25D366]" />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }

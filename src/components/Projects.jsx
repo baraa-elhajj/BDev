@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const projects = [
@@ -42,15 +43,33 @@ export default function Projects() {
       id="projects"
       className="flex flex-col items-center text-center lg:text-left lg:items-start px-6 lg:px-16 py-25"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold text-[#ffbd59] mb-5">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="text-3xl sm:text-4xl font-bold text-[#ffbd59] mb-5"
+      >
         Featured Projects
-      </h2>
+      </motion.h2>
 
-      <div className="space-y-4 text-white/85 text-md sm:text-lg leading-relaxed max-w-3xl mb-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.7 }}
+        className="space-y-4 text-white/85 text-md sm:text-lg leading-relaxed max-w-3xl mb-8"
+      >
         <p>Check out some of my latest projects:</p>
-      </div>
+      </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.7 }}
+        className="grid md:grid-cols-3 gap-8"
+      >
         {projects.map((project, index) => (
           <div
             key={index}
@@ -106,7 +125,7 @@ export default function Projects() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

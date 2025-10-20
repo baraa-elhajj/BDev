@@ -1,6 +1,7 @@
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import { SendHorizontalIcon } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 
 export default function HireMe() {
@@ -37,13 +38,32 @@ export default function HireMe() {
       id="hire-me"
       className="flex flex-col items-center justify-center min-h-screen w-full text-white px-4 py-25"
     >
-      <h2 className="text-4xl font-bold mb-6 text-[#ffbd59]">Hire Me</h2>
-      <p className="text-gray-300 mb-10 max-w-md text-center">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="text-4xl font-bold mb-6 text-[#ffbd59]"
+      >
+        Hire Me
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.7 }}
+        className="text-gray-300 mb-10 max-w-md text-center"
+      >
         Interested in working together? Fill out the form below and I’ll get
         back to you as soon as possible.
-      </p>
+      </motion.p>
 
-      <form
+      <motion.form
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.7 }}
         ref={formRef}
         onSubmit={handleSubmit}
         className="flex flex-col w-full max-w-2xl text-white/80 bg-[#2f2f37] p-8 rounded-lg shadow-lg"
@@ -115,7 +135,7 @@ export default function HireMe() {
             </>
           )}
         </button>
-      </form>
+      </motion.form>
     </section>
   );
 }
