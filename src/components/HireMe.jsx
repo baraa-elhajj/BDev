@@ -28,9 +28,10 @@ export default function HireMe() {
           toast.error("Failed to send email. Please try again later.");
           console.error("Failed to send email: ", error);
         }
-      );
-
-    setIsLoading(false);
+      )
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -73,6 +74,7 @@ export default function HireMe() {
           name="from_name"
           placeholder="Your Name"
           required
+          disabled={isLoading}
           autoComplete="off"
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
           focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
@@ -83,6 +85,7 @@ export default function HireMe() {
           name="from_email"
           placeholder="Your Email"
           required
+          disabled={isLoading}
           autoComplete="off"
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
           focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
@@ -93,6 +96,7 @@ export default function HireMe() {
           name="subject"
           placeholder="Subject"
           required
+          disabled={isLoading}
           autoComplete="off"
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
           focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
@@ -102,6 +106,7 @@ export default function HireMe() {
           name="message"
           placeholder="Describe your project..."
           required
+          disabled={isLoading}
           rows={6}
           className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
           focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
