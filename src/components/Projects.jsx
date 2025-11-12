@@ -3,10 +3,19 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import bdev from "../assets/images/projects/bdev.png";
 import reactlab from "../assets/images/projects/reactlab.png";
-import todoapp from "../assets/images/projects/todoapp.png";
+import todoapp from "../assets/images/projects/todo-app.png";
 import weatherly from "../assets/images/projects/weatherly.png";
+import authin from "../assets/images/projects/auth-in.png";
 
 const projects = [
+  {
+    name: "Auth In",
+    description:
+      "A cool full-stack authentication system built with MERN stack, featuring user authentication, password reset, and custom emails.",
+    imageSrc: `${authin}`,
+    githubLink: "https://github.com/baraa-elhajj/auth-in",
+    demoLink: "",
+  },
   {
     name: "Weatherly",
     description:
@@ -16,9 +25,9 @@ const projects = [
     demoLink: "https://weatherly-lb.vercel.app/",
   },
   {
-    name: "Todo-App",
+    name: "Todo App",
     description:
-      "A Todo manager application built with React, Supabase, Chakra UI, and React Context API. This project demonstrates clean state management, database integration, and a modular architecture.",
+      "A task manager application built with React, Supabase, Chakra UI, and React Context API. This project demonstrates clean state management, database integration, and a modular architecture.",
     imageSrc: `${todoapp}`,
     githubLink: "https://github.com/baraa-elhajj/Todo-App",
     demoLink: "https://todoapp-lb.vercel.app/",
@@ -83,7 +92,7 @@ export default function Projects() {
             <img
               src={project.imageSrc}
               alt={project.name}
-              className="w-full h-48 object-contain rounded-lg"
+              className="w-full h-auto object-contain rounded-md"
             />
             <div className="p-5 flex flex-col gap-3">
               <h3 className="text-md sm:text-2xl font-semibold">
