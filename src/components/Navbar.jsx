@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
 import logo from "../assets/images/logo.png";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,6 +90,7 @@ export default function Navbar() {
               >
                 <a href="#hire-me">Hire Me</a>
               </button>
+              <LanguageToggle />
             </div>
           </div>
 
