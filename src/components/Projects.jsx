@@ -5,7 +5,7 @@ import bdev from "../assets/images/projects/bdev.png";
 import reactlab from "../assets/images/projects/reactlab.png";
 import todoapp from "../assets/images/projects/todo-app.png";
 import weatherly from "../assets/images/projects/weatherly.png";
-import authin from "../assets/images/projects/auth-in.png";
+import authin from "../assets/images/projects/auth-in-new.png";
 
 const projects = [
   {
