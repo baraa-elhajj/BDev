@@ -9,6 +9,9 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useTranslation("navbar");
 
+  // TODO: complete all translations then enable feature
+  const translationAllowed = false;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -92,7 +95,8 @@ export default function Navbar() {
               >
                 <a href="#hire-me">{t("HireMe")}</a>
               </button>
-              <LanguageToggle />
+
+              {translationAllowed && <LanguageToggle />}
             </div>
           </div>
 
