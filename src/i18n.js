@@ -9,7 +9,7 @@ i18n
     lng: "en",
     fallbackLng: "en",
     debug: true,
-    ns: ["common", "home"],
+    ns: ["common", "navbar"],
     defaultNS: "common",
     interpolation: {
       escapeValue: false,

@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
 import logo from "../assets/images/logo.png";
 import LanguageToggle from "./LanguageToggle";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation("navbar");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,10 +28,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "#about", text: "About" },
-    { href: "#services", text: "Services" },
-    { href: "#projects", text: "Projects" },
-    { href: "#contact", text: "Contact" },
+    { href: "#about", text: `${t("About")}` },
+    { href: "#services", text: `${t("Services")}` },
+    { href: "#projects", text: `${t("Projects")}` },
+    { href: "#contact", text: `${t("Contact")}` },
   ];
 
   return (
@@ -80,7 +82,7 @@ export default function Navbar() {
                 text-xs lg:text-sm font-medium text-[#36353d] border border-[#36353d] rounded-md 
                 hover:bg-[#36353d] hover:text-white transition-colors duration-300"
               >
-                <span>Resume</span>
+                <span>{t("Resume")}</span>
                 <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
               </a>
               <button
@@ -88,7 +90,7 @@ export default function Navbar() {
               font-medium bg-[#36353d] text-white  
               rounded-md hover:bg-gray-800  transition-colors duration-300"
               >
-                <a href="#hire-me">Hire Me</a>
+                <a href="#hire-me">{t("HireMe")}</a>
               </button>
               <LanguageToggle />
             </div>
