@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { BriefcaseBusiness } from "lucide-react";
 import profile1 from "../assets/images/profile.png";
 import profile2 from "../assets/images/profile-light.png";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Home() {
+  const { theme } = useTheme();
+
   return (
     <section className="flex flex-col md:flex-row items-center justify-between px-6 lg:px-16 py-16">
       <div className="space-y-6 text-center md:text-left md:w-1/2">

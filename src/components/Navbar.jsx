@@ -3,6 +3,7 @@ import { Menu, X, ExternalLink } from "lucide-react";
 import logo from "../assets/images/logo.png";
 import LanguageToggle from "./LanguageToggle";
 import { useTranslation } from "react-i18next";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -97,6 +98,7 @@ export default function Navbar() {
               </button>
 
               {translationAllowed && <LanguageToggle />}
+              <ThemeToggle />
             </div>
           </div>
 
