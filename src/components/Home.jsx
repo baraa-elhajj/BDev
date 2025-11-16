@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { BriefcaseBusiness } from "lucide-react";
-import profile from "../assets/images/profile.png";
+import profile1 from "../assets/images/profile.png";
+import profile2 from "../assets/images/profile-light.png";
 
 export default function Home() {
   return (
@@ -8,11 +9,19 @@ export default function Home() {
       <div className="space-y-6 text-center md:text-left md:w-1/2">
         {/* Mobile */}
         <div className="block md:hidden mb-4">
-          <img
-            src={profile}
-            alt="Profile"
-            className="w-40 h-50 rounded-full object-cover mx-auto "
-          />
+          {theme === "dark" ? (
+            <img
+              src={profile1}
+              alt="Profile"
+              className="w-40 h-50 rounded-full object-cover mx-auto"
+            />
+          ) : (
+            <img
+              src={profile2}
+              alt="Profile"
+              className="w-40 h-50 rounded-full object-cover mx-auto"
+            />
+          )}
         </div>
 
         <motion.h2
@@ -75,7 +84,11 @@ export default function Home() {
         transition={{ duration: 0.7 }}
         className="hidden md:flex w-1/2 justify-center"
       >
-        <img src={profile} alt="Profile" className="w-100 h-100" />
+        {theme === "dark" ? (
+          <img src={profile1} alt="Profile" className="w-100 h-100" />
+        ) : (
+          <img src={profile2} alt="Profile" className="w-100 h-100" />
+        )}
       </motion.div>
     </section>
   );
