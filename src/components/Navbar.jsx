@@ -13,6 +13,9 @@ export default function Navbar() {
   // TODO: complete all translations then enable feature
   const translationAllowed = false;
 
+  // TODO: complete all theme changes then enable feature
+  const themeAllowed = false;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -98,12 +101,12 @@ export default function Navbar() {
               </button>
 
               {translationAllowed && <LanguageToggle />}
-              <ThemeToggle />
+              {themeAllowed && <ThemeToggle />}
             </div>
           </div>
 
           <div className="md:hidden flex justify-end">
-            <ThemeToggle />
+            {themeAllowed && <ThemeToggle />}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className=" p-2 text-(--navbar-text-color) rounded-md transition-colors"
