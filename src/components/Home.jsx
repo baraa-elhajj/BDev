@@ -20,7 +20,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#ffbd59] leading-tight"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-(--font-color-header) leading-tight"
         >
           Code with purpose. Build with passion.
         </motion.h2>
@@ -30,12 +30,13 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="text-base sm:text-lg text-white/85 leading-relaxed"
+          className="text-base sm:text-lg text-(--font-color-paragraph)/85 leading-relaxed"
         >
           I build web apps with modern tools like{" "}
-          <span className="text-[#ffbd59]/90">React</span>,{" "}
-          <span className="text-[#ffbd59]/85">Next.js</span>, and{" "}
-          <span className="text-[#ffbd59]/85">MERN</span> stack.<br></br>
+          <span className="text-(--font-color-header)/90">React</span>,{" "}
+          <span className="text-(--font-color-header)/90">Next.js</span>, and{" "}
+          <span className="text-(--font-color-header)/90">MERN</span> stack.
+          <br></br>
           My passion for building and solving problems through code thrives me
           to push boundaries and turn ideas into reality.
         </motion.p>
@@ -49,16 +50,16 @@ export default function Home() {
         >
           <a
             href="#projects"
-            className="px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-semibold text-white/85 
-            border border-[#ffbd59] rounded-md hover:bg-[#ffbd59] hover:text-[#36353d]/95 
+            className="px-3 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm font-semibold text-(--font-color-paragraph)/85 
+            border border-(--font-color-header) rounded-md hover:bg-(--font-color-header) hover:text-(--navbar-text-color)/95 
             transition-colors duration-300"
           >
             Some of my projects
           </a>
           <button
             className="flex items-center justify-center cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 
-            text-xs lg:text-sm font-semibold bg-[#ffbd59] text-[#36353d]/95 rounded-md 
-            hover:bg-[#ffbd59]/80 transition-colors duration-300"
+            text-xs lg:text-sm font-semibold bg-(--font-color-header) text-(--navbar-text-color)/95 rounded-md 
+            hover:bg-(--font-color-header)/80 transition-colors duration-300"
           >
             <a href="#hire-me">Hire Me</a>
             <BriefcaseBusiness className="h-3 lg:h-4 w-3 lg:w-4 ml-1.5 mb-0.5" />

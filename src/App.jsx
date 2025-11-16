@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div id="home" className="bg-[#36353d]">
+      <div id="home" className="bg-(--bg-color)">
         <Navbar />
         <ArrowUp />
         <Home />
