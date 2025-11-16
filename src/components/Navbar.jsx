@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <header className="z-20 sticky top-0 w-full">
       <div
-        className={`bg-[#ffbd59] border-[#ffbd59] w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 
+        className={`bg-(--navbar-color) border-(--navbar-color) w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 
           transition-all duration-300
         ${
           isScrolled
@@ -63,12 +63,12 @@ export default function Navbar() {
                 <a
                   key={link.text}
                   href={link.href}
-                  className="text-sm lg:text-base font-medium text-[#36353d]  
-                  hover:text-gray-900 transition-colors relative group"
+                  className="text-sm lg:text-base font-medium text-(--navbar-text-color)
+                  hover:text-(--navbar-text-color) transition-colors relative group"
                 >
                   {link.text}
                   <span
-                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#36353d]  
+                    className="absolute -bottom-1 left-0 w-0 h-0.5 bg-(--navbar-text-color)  
                   transition-all duration-300 group-hover:w-full"
                   ></span>
                 </a>
@@ -82,16 +82,16 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 
-                text-xs lg:text-sm font-medium text-[#36353d] border border-[#36353d] rounded-md 
-                hover:bg-[#36353d] hover:text-white transition-colors duration-300"
+                text-xs lg:text-sm font-medium text-(--navbar-text-color) border border-(--navbar-text-color) rounded-md 
+                hover:bg-(--navbar-text-color) hover:text-(--font-color-paragraph) transition-colors duration-300"
               >
                 <span>{t("Resume")}</span>
                 <ExternalLink className="h-3 w-3 lg:h-4 lg:w-4" />
               </a>
               <button
                 className="cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm 
-              font-medium bg-[#36353d] text-white  
-              rounded-md hover:bg-gray-800  transition-colors duration-300"
+              font-medium bg-(--navbar-text-color) text-(--font-color-paragraph)  
+              rounded-md hover:bg-(--navbar-text-color)/90 transition-colors duration-300"
               >
                 <a href="#hire-me">{t("HireMe")}</a>
               </button>
