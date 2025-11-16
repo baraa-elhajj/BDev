@@ -45,7 +45,7 @@ export default function Navbar() {
           transition-all duration-300
         ${
           isScrolled
-            ? "bg-[#ffbd59] border-[#ffbd59] md:bg-[#ffbd59]/85 md:border-[#ffbd59]/85 backdrop-blur-lg shadow-lg"
+            ? "bg-(--navbar-color) border-(--navbar-color) md:bg-(--navbar-color)/85 md:border-(--navbar-color)/85 backdrop-blur-lg shadow-lg"
             : "backdrop-blur-md"
         }`}
       >
@@ -102,21 +102,24 @@ export default function Navbar() {
             </div>
           </div>
 
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-[#36353d] rounded-md transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="h-5 w-5 sm:h-6 sm:w-6" />
-            ) : (
-              <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
-            )}
-          </button>
+          <div className="md:hidden flex justify-end">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className=" p-2 text-(--navbar-text-color) rounded-md transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-5 w-5 sm:h-6 sm:w-6" />
+              ) : (
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         <div
-          className={`bg-[#ffbd59] absolute left-0 w-full md:hidden transition-all duration-300 ease-in-out 
+          className={`bg-(--navbar-color) absolute left-0 w-full md:hidden transition-all duration-300 ease-in-out 
             ${
               isMenuOpen
                 ? "max-h-96 opacity-100"
@@ -130,7 +133,7 @@ export default function Navbar() {
                 key={link.text}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="px-3 py-2.5 text-sm sm:text-base font-medium text-[#36353d] 
+                className="px-3 py-2.5 text-sm sm:text-base font-medium text-(--navbar-text-color) 
                   rounded-md transition-colors"
               >
                 {link.text}
@@ -142,7 +145,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-2 px-3 py-2.5 text-sm font-medium 
-                  border border-[#36353d] rounded-md transition-colors"
+                  text-(--navbar-text-color) border border-(--navbar-text-color) rounded-md transition-colors"
               >
                 <span>Resume</span>
                 <ExternalLink className="h-4 w-4" />
