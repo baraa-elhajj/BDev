@@ -24,8 +24,9 @@ export default function ArrowUp() {
   return (
     <button
       onClick={scrollToTop}
-      className={`z-20 cursor-pointer fixed hidden lg:flex bottom-6 right-3.5 p-3 rounded-full shadow-lg bg-[#ffbd59] text-[#36353d]
-        hover:bg-[#ffbd59]/80 transition-all duration-300 
+      className={`z-20 cursor-pointer fixed hidden lg:flex bottom-6 right-3.5 p-3 rounded-full shadow-lg
+        bg-(--font-color-header) text-(--font-color-reverse-paragraph) hover:bg-(--font-color-header)/80 
+        transition-all duration-300 
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} 
         focus:outline-none`}
     >
