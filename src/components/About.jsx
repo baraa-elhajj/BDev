@@ -14,19 +14,22 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-3xl sm:text-4xl font-bold text-[#ffbd59] mb-3"
+            className="text-3xl sm:text-4xl font-bold text-(--font-color-header) mb-3"
           >
             About Me
           </motion.h2>
 
-          <div className="space-y-4 text-white/85 sm:text-lg leading-relaxed max-w-3xl">
+          <div className="space-y-4 text-(--font-color-paragraph)/85 sm:text-lg leading-relaxed max-w-3xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.7 }}
             >
-              I'm a <span className="text-[#ffbd59]">Full-Stack Engineer</span>{" "}
+              I'm a{" "}
+              <span className="text-(--font-color-header)">
+                Full-Stack Engineer
+              </span>{" "}
               with 4+ years of hands-on experience building and optimizing web
               applications.
             </motion.p>
@@ -62,22 +65,22 @@ export default function About() {
             className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 my-2 sm:my-4"
           >
             <span
-              className="px-3 sm:px-4 py-1 sm:py-2 border border-[#ffbd59] rounded-lg 
-            text-white text-sm sm:text-base hover:bg-[#ffbd59] hover:text-[#36353d] 
+              className="px-3 sm:px-4 py-1 sm:py-2 border border-(--font-color-header) rounded-lg 
+            text-(--font-color-paragraph) text-sm sm:text-base hover:bg-(--font-color-header) hover:text-(--font-color-reverse-paragraph) 
             transition-all duration-300 cursor-default"
             >
               MERN Stack
             </span>
             <span
-              className="px-3 sm:px-4 py-1 sm:py-2 border border-[#ffbd59] rounded-lg 
-            text-white text-sm sm:text-base hover:bg-[#ffbd59] hover:text-[#36353d] 
+              className="px-3 sm:px-4 py-1 sm:py-2 border border-(--font-color-header) rounded-lg 
+            text-(--font-color-paragraph) text-sm sm:text-base hover:bg-(--font-color-header) hover:text-(--font-color-reverse-paragraph) 
             transition-all duration-300 cursor-default"
             >
               Clean Coder
             </span>
             <span
-              className="px-3 sm:px-4 py-1 sm:py-2 border border-[#ffbd59] rounded-lg 
-            text-white text-sm sm:text-base hover:bg-[#ffbd59] hover:text-[#36353d] 
+              className="px-3 sm:px-4 py-1 sm:py-2 border border-(--font-color-header) rounded-lg 
+            text-(--font-color-paragraph) text-sm sm:text-base hover:bg-(--font-color-header) hover:text-(--font-color-reverse-paragraph) 
             transition-all duration-300 cursor-default"
             >
               Problem Solver
@@ -89,7 +92,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="italic text-white text-xs sm:text-sm lg:text-sm max-w-lg leading-relaxed"
+            className="italic text-(--font-color-paragraph) text-xs sm:text-sm lg:text-sm max-w-lg leading-relaxed"
           >
             “✨ JavaScript lover ⚡ Code. Build. Learn. Repeat 💻 Lifelong
             learner”

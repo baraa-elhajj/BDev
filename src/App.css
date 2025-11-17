@@ -4,18 +4,26 @@
     --bg-color: #fafafa;
     --font-color-header: #59a9ff;
     --font-color-paragraph: #36353d;
+    --font-color-reverse-paragraph: white;
 
     --navbar-color: #59a9ff;
     --navbar-text-color: #fafafa;
+
+    --font-color-coder-var-name: #283d7d;
+    --font-color-coder-var-value: #c6351c;
 }
 
 .dark {
     --bg-color: #36353d;
     --font-color-header: #ffbd59;
     --font-color-paragraph: white;
+    --font-color-reverse-paragraph: #36353d;
 
     --navbar-color: #ffbd59;
     --navbar-text-color: #36353d;
+
+    --font-color-coder-var-name: #8ec5ff;
+    --font-color-coder-var-value: #ffbd59;
 }
 
 body {
