@@ -37,14 +37,15 @@ export default function HireMe() {
   return (
     <section
       id="hire-me"
-      className="flex flex-col items-center justify-center min-h-screen w-full text-white px-4 py-25"
+      className="flex flex-col items-center justify-center min-h-screen w-full text-(--font-color-paragraph) 
+      px-4 py-25"
     >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="text-4xl font-bold mb-6 text-[#ffbd59]"
+        className="text-4xl font-bold mb-6 text-(--font-color-header)"
       >
         Hire Me
       </motion.h2>
@@ -54,7 +55,7 @@ export default function HireMe() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1, duration: 0.7 }}
-        className="text-gray-300 mb-5 max-w-md text-center"
+        className="text-(--font-color-paragraph)/80 mb-5 max-w-lg text-center text-md sm:text-lg"
       >
         Interested in working together? Fill out the form below and I’ll get
         back to you as soon as possible.
@@ -67,7 +68,8 @@ export default function HireMe() {
         transition={{ delay: 0.2, duration: 0.7 }}
         ref={formRef}
         onSubmit={handleSubmit}
-        className="flex flex-col w-full max-w-2xl text-white/80 bg-[#2f2f37] p-8 rounded-lg shadow-lg"
+        className="flex flex-col w-full max-w-2xl text-(--font-color-paragraph)/80 bg-(--bg-color-form) 
+        p-8 rounded-lg shadow-lg"
       >
         <input
           type="text"
@@ -76,8 +78,8 @@ export default function HireMe() {
           required
           disabled={isLoading}
           autoComplete="off"
-          className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
-          focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
+          className="mb-4 p-4 rounded-lg bg-(--bg-color) border border-(--font-color-header) focus:outline-none 
+          focus:ring-1 focus:ring-(--font-color-header) transition-all duration-300 text-xs lg:text-sm"
         />
 
         <input
@@ -87,8 +89,8 @@ export default function HireMe() {
           required
           disabled={isLoading}
           autoComplete="off"
-          className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
-          focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
+          className="mb-4 p-4 rounded-lg bg-(--bg-color) border border-(--font-color-header) focus:outline-none 
+          focus:ring-1 focus:ring-(--font-color-header) transition-all duration-300 text-xs lg:text-sm"
         />
 
         <input
@@ -98,8 +100,8 @@ export default function HireMe() {
           required
           disabled={isLoading}
           autoComplete="off"
-          className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
-          focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
+          className="mb-4 p-4 rounded-lg bg-(--bg-color) border border-(--font-color-header) focus:outline-none 
+          focus:ring-1 focus:ring-(--font-color-header) transition-all duration-300 text-xs lg:text-sm"
         />
 
         <textarea
@@ -108,8 +110,8 @@ export default function HireMe() {
           required
           disabled={isLoading}
           rows={6}
-          className="mb-4 p-4 rounded-lg bg-[#36353d] border border-[#ffbd59] focus:outline-none 
-          focus:ring-1 focus:ring-[#ffbd59] transition-all duration-300 text-xs lg:text-sm"
+          className="mb-4 p-4 rounded-lg bg-(--bg-color) border border-(--font-color-header) focus:outline-none 
+          focus:ring-1 focus:ring-(--font-color-header) transition-all duration-300 text-xs lg:text-sm"
         />
 
         <button
@@ -120,14 +122,14 @@ export default function HireMe() {
             transition-colors duration-300
             ${
               isLoading
-                ? "bg-[#ffbd59]/60 text-[#36353d]/50 cursor-not-allowed"
-                : "bg-[#ffbd59] text-[#36353d]/95 hover:bg-[#ffbd59]/80 cursor-pointer"
+                ? "bg-(--font-color-header)/60 text-(--font-color-reverse-paragraph)/50 cursor-not-allowed"
+                : "bg-(--font-color-header) text-(--font-color-reverse-paragraph)/95 hover:bg-(--font-color-header)/80 cursor-pointer"
             }`}
         >
           {isLoading ? (
             <span className="flex items-center gap-2">
               <svg
-                className="h-4 w-4 text-[#36353d] animate-spin"
+                className="h-4 w-4 text-(--font-color-reverse-paragraph) animate-spin"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 24 24"

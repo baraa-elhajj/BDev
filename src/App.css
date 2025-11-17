@@ -11,6 +11,8 @@
 
     --font-color-coder-var-name: #283d7d;
     --font-color-coder-var-value: #c6351c;
+
+    --bg-color-form: white;
 }
 
 .dark {
@@ -24,6 +26,8 @@
 
     --font-color-coder-var-name: #8ec5ff;
     --font-color-coder-var-value: #ffbd59;
+
+    --bg-color-form: #2f2f37;
 }
 
 body {
