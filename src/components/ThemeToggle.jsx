@@ -14,16 +14,6 @@ const ThemeToggle = () => {
       <AnimatePresence mode="wait">
         {theme === "dark" ? (
           <motion.div
-            key="sun"
-            initial={{ y: -5, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 5, opacity: 0 }}
-            transition={{ duration: 0.15 }}
-          >
-            <FiSun size={18} />
-          </motion.div>
-        ) : (
-          <motion.div
             key="moon"
             initial={{ y: -5, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -31,6 +21,16 @@ const ThemeToggle = () => {
             transition={{ duration: 0.15 }}
           >
             <FiMoon size={18} />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="sun"
+            initial={{ y: -5, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 5, opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            <FiSun size={18} />
           </motion.div>
         )}
       </AnimatePresence>

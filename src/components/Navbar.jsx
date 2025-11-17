@@ -1,8 +1,8 @@
+import logo from "../assets/images/logo.png";
 import { useEffect, useState } from "react";
 import { Menu, X, ExternalLink } from "lucide-react";
-import logo from "../assets/images/logo.png";
-import LanguageToggle from "./LanguageToggle";
 import { useTranslation } from "react-i18next";
+import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
@@ -76,8 +76,9 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {}
             <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
+              <ThemeToggle />
+              <span></span>
               <a
                 href="/documents/BaraaElHajj-resume.pdf"
                 target="_blank"
@@ -98,10 +99,10 @@ export default function Navbar() {
               </button>
 
               {translationAllowed && <LanguageToggle />}
-              <ThemeToggle />
             </div>
           </div>
 
+          {/* Mobile */}
           <div className="md:hidden flex justify-end">
             <ThemeToggle />
             <button
