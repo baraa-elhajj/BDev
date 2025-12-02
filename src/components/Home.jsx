@@ -60,14 +60,15 @@ export default function Home() {
           >
             Some of my projects
           </a>
-          <button
+          <a
+            href="#hire-me"
             className="flex items-center justify-center cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 
             text-xs lg:text-sm font-semibold bg-(--font-color-header) text-(--navbar-text-color)/95 rounded-md 
             hover:bg-(--font-color-header)/80 transition-colors duration-300"
           >
-            <a href="#hire-me">Hire Me</a>
+            Hire Me
             <BriefcaseBusiness className="h-3 lg:h-4 w-3 lg:w-4 ml-1.5 mb-0.5" />
-          </button>
+          </a>
         </motion.div>
       </div>
 
