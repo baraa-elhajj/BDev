@@ -13,6 +13,8 @@ export default function Navbar() {
   // TODO: complete all translations then enable feature
   const translationAllowed = false;
 
+  const blogFeature = false;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -98,6 +100,16 @@ export default function Navbar() {
                 <a href="#hire-me">{t("HireMe")}</a>
               </button>
 
+              {blogFeature && (
+                <button
+                  className="cursor-pointer px-4 lg:px-6 py-1.5 lg:py-2 text-xs lg:text-sm 
+                    font-medium bg-(--navbar-text-color) text-(--font-color-paragraph)  
+                    rounded-md hover:bg-(--navbar-text-color)/90 transition-colors duration-300"
+                >
+                  <a href="#blog-website">Blog</a>
+                </button>
+              )}
+
               {translationAllowed && <LanguageToggle />}
             </div>
           </div>
@@ -158,6 +170,16 @@ export default function Navbar() {
               >
                 <a href="#hire-me">Hire Me</a>
               </button>
+
+              {blogFeature && (
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-3 py-2.5 text-sm font-medium bg-[#36353d] text-white 
+                  rounded-md transition-colors"
+                >
+                  <a href="#blog-website">Blog</a>
+                </button>
+              )}
             </div>
           </div>
         </div>
