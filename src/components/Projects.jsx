@@ -6,9 +6,20 @@ import reactlab from "../assets/images/projects/reactlab.png";
 import todoapp from "../assets/images/projects/todo-app.png";
 import weatherly from "../assets/images/projects/weatherly.png";
 import authin from "../assets/images/projects/auth-in-new.png";
+import aiTriageWorkflow from "../assets/images/projects/ai-triage-workflow.png";
+
 import { SiGithub } from "react-icons/si";
 
 const projects = [
+  {
+    name: "AI Support Triage Workflow",
+    description:
+      "An AI-powered workflow built with n8n that processes incoming support requests by automatically classifying them, enriching them with relevant context, generating summaries, and routing to the appropriate internal team.",
+    imageSrc: `${aiTriageWorkflow}`,
+    githubLink: "https://github.com/baraa-elhajj/ai-triage-workflow",
+    demoLink: "",
+    hidden: false,
+  },
   {
     name: "Auth In",
     description:
@@ -39,7 +50,7 @@ const projects = [
   {
     name: "BDev",
     description:
-      "Built modern and responsive personal website using React, Tailwind CSS, and Sera UI.",
+      "Built a modern and responsive personal website using React, Tailwind CSS, and Sera UI.",
     imageSrc: `${bdev}`,
     githubLink: "https://github.com/baraa-elhajj/BDev",
     demoLink: "",
