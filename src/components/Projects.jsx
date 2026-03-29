@@ -16,6 +16,7 @@ const projects = [
     imageSrc: `${authin}`,
     githubLink: "https://github.com/baraa-elhajj/auth-in",
     demoLink: "",
+    hidden: false,
   },
   {
     name: "Weatherly",
@@ -24,6 +25,7 @@ const projects = [
     imageSrc: `${weatherly}`,
     githubLink: "https://github.com/baraa-elhajj/Weatherly",
     demoLink: "https://weatherly-lb.vercel.app/",
+    hidden: false,
   },
   {
     name: "Todo App",
@@ -32,6 +34,7 @@ const projects = [
     imageSrc: `${todoapp}`,
     githubLink: "https://github.com/baraa-elhajj/Todo-App",
     demoLink: "https://todoapp-lb.vercel.app/",
+    hidden: false,
   },
   {
     name: "BDev",
@@ -40,6 +43,7 @@ const projects = [
     imageSrc: `${bdev}`,
     githubLink: "https://github.com/baraa-elhajj/BDev",
     demoLink: "",
+    hidden: false,
   },
   {
     name: "React Lab",
@@ -48,6 +52,7 @@ const projects = [
     imageSrc: `${reactlab}`,
     githubLink: "https://github.com/baraa-elhajj/React-Lab",
     demoLink: "",
+    hidden: true,
   },
 ];
 
@@ -85,7 +90,7 @@ export default function Projects() {
         transition={{ delay: 0.2, duration: 0.7 }}
         className="grid md:grid-cols-3 gap-8"
       >
-        {projects.map((project, index) => (
+        {projects.filter((project) => !project.hidden).map((project, index) => (
           <div
             key={index}
             className="relative bg-transparent border border-(--font-color-header) text-(--font-color-paragraph)/85 
