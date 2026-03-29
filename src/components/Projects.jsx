@@ -50,7 +50,7 @@ const projects = [
   {
     name: "BDev",
     description:
-      "Built modern and responsive personal website using React, Tailwind CSS, and Sera UI.",
+      "Built a modern and responsive personal website using React, Tailwind CSS, and Sera UI.",
     imageSrc: `${bdev}`,
     githubLink: "https://github.com/baraa-elhajj/BDev",
     demoLink: "",
