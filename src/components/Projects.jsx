@@ -90,7 +90,7 @@ export default function Projects() {
         transition={{ delay: 0.2, duration: 0.7 }}
         className="grid md:grid-cols-3 gap-8"
       >
-        {projects.map((project, index) => (
+        {projects.filter((project) => !project.hidden).map((project, index) => (
           <div
             key={index}
             className="relative bg-transparent border border-(--font-color-header) text-(--font-color-paragraph)/85 
