@@ -82,7 +82,7 @@ export default function Navbar() {
               <ThemeToggle />
               <span></span>
               <a
-                href="/documents/BaraaElHajj-resume.pdf"
+                href="/documents/Baraa El Hajj - Full Stack Software Engineer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-1.5 lg:space-x-2 px-3 lg:px-4 py-1.5 lg:py-2 
